@@ -8,16 +8,18 @@ public class ClockRiddleScript : MonoBehaviour
     public static int clock2 = 6;
     public static int clock3 = 6;
     public static int clock4 = 6;
-
+    private static bool doorOpened = false;
     void Update()
     {
-        ClockSolution();    
+        if(doorOpened == false) ClockSolution();    
     }
     public void ClockSolution()
     {
-        if (ClockRiddleScript.clock1 == 12 && ClockRiddleScript.clock2 == 12 && ClockRiddleScript.clock3 == 12)
+        if (ClockRiddleScript.clock1 % 12 == 0 && ClockRiddleScript.clock2 % 12 == 0 && ClockRiddleScript.clock3 % 12 == 0)
         {
             //zaprogramować otwarcie drzwi
+            doorOpened = true;
+            Debug.Log("Drzwi otwarte");
         }
     }
 }
