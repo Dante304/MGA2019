@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     private Rigidbody2D rb2d;
     public float speed;
+    public bool stop;
     public float moveInput;
     public float jumpForce;
     private bool isGrounded;
@@ -26,29 +27,32 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        moveInput = Input.GetAxisRaw("Horizontal");
-        rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y);
+        if (!stop)
+        {
+            moveInput = Input.GetAxisRaw("Horizontal");
+            rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y);
+        }
     }
 
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius,whatIsGround);
+        if (!stop)
+        {
+            Move();
+        }
+    }
 
-        //if (moveInput > 0)
-        //{
-        //    transform.eulerAngles = new Vector3(0, 0, 0);
-        //}
-        //else if (moveInput < 0)
-        //{
+    private void Move()
+    {
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
-        //}
-        if (isGrounded==true&&Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
             isJumping = true;
             jumpTimeCounter = jumpTime;
-            rb2d.velocity = Vector2.up * jumpForce; 
+            rb2d.velocity = Vector2.up * jumpForce;
         }
-        if (Input.GetKey(KeyCode.Space)&&isJumping==true)
+        if (Input.GetKey(KeyCode.Space) && isJumping == true)
         {
             if (jumpTimeCounter > 0)
             {
@@ -64,6 +68,7 @@ public class PlayerMove : MonoBehaviour
         {
             isJumping = false;
         }
+
     }
 
 }

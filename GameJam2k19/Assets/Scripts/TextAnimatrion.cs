@@ -23,7 +23,6 @@ public class TextAnimatrion : MonoBehaviour
     {
         if (textDisplay.text==sentences[index])
         {
-            
             index++;
             textDisplay.text = "";
             StartCoroutine(Type());
@@ -42,8 +41,7 @@ public class TextAnimatrion : MonoBehaviour
     {          
             index++;
             textDisplay.text = "";
-            StartCoroutine(Type());    
-       
+            StartCoroutine(Type());
     }
     
 }
