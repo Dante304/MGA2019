@@ -8,7 +8,7 @@ public class MenuKeys : MonoBehaviour
     public GameObject creditsinfo;
     public void PressStartButton()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Intro");
     }
     public void ExitGame()
     {
@@ -22,6 +22,14 @@ public class MenuKeys : MonoBehaviour
 
     private void Update()
     {
-        
+        if(Input.GetMouseButtonDown(0))
+        {
+            creditsinfo.SetActive(false);
+        }
+    }
+
+    public void QuitCredits()
+    {
+        creditsinfo.SetActive(false);
     }
 }
