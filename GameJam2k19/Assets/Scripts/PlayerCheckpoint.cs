@@ -15,6 +15,7 @@ public class PlayerCheckpoint : MonoBehaviour
 
         if (collision.tag == "Enemy")
         {
+            this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 5;
             var lastCheckpoint = listOfCheckpoints.Count - 1;
             var checkpointTransform = listOfCheckpoints[lastCheckpoint].transform.position;
             this.transform.position = new Vector2(checkpointTransform.x, checkpointTransform.y);
