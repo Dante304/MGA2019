@@ -5,18 +5,23 @@ using UnityEngine;
 public class GravityController : MonoBehaviour
 {
     private Rigidbody2D rb2d;
+    
 
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            rb2d.gravityScale *= -1;
-        }
+        rb2d.gravityScale *= -1;
     }
 
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.W))
+    //    {
+    //        rb2d.gravityScale *= -1;
+    //    }
+    //}
 }
