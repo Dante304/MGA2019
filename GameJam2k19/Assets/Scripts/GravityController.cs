@@ -5,7 +5,6 @@ using UnityEngine;
 public class GravityController : MonoBehaviour
 {
     private Rigidbody2D rb2d;
-    
 
     private void Start()
     {
@@ -15,13 +14,9 @@ public class GravityController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         rb2d.gravityScale *= -1;
-    }
+        Debug.Log(" gravity ");
 
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.W))
-    //    {
-    //        rb2d.gravityScale *= -1;
-    //    }
-    //}
+
+    }
 }
+
