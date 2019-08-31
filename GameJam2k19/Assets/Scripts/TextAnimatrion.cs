@@ -15,14 +15,18 @@ public class TextAnimatrion : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(Type());   
+        StartCoroutine(Type());
+        continueButton.SetActive(true);
     }
 
     void Update()
     {
         if (textDisplay.text==sentences[index])
         {
-            continueButton.SetActive(true);
+            
+            index++;
+            textDisplay.text = "";
+            StartCoroutine(Type());
         }    
     }
     IEnumerator Type()
@@ -35,19 +39,11 @@ public class TextAnimatrion : MonoBehaviour
     }
 
     public void NextSentence()
-    {
-        
-        continueButton.SetActive(false);  
-        if (index<sentences.Length-1)
-        {
+    {          
             index++;
             textDisplay.text = "";
-            StartCoroutine(Type());  
-        }
-        else
-        {
-            textDisplay.text = "";
-            continueButton.SetActive(false);    
-        }
+            StartCoroutine(Type());    
+       
     }
+    
 }
