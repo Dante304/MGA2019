@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 84d44e372f6be0945a6f73a3af04ed22
+  - enabled: 1
+    path: Assets/Scenes/Outro-Bad.unity
+    guid: 9bfdbf3835e4e7b40bffa46f636d9bf3
+  - enabled: 1
+    path: Assets/Scenes/Outro-Good.unity
+    guid: b8636e487c64a7542a000f9893813e3c
   m_configObjects: {}

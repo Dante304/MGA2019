@@ -11,10 +11,14 @@ public class TextAnimatrion : MonoBehaviour
     private int index;
     public float typingSpeed;
     public GameObject continueButton;
-    
+    public List<AudioClip> audioClips;
+    public AudioSource audio;
 
     void Start()
     {
+        audio = GetComponent<AudioSource>();
+        audio.clip = audioClips[index];
+        audio.Play();
         StartCoroutine(Type());
     }
 
@@ -42,6 +46,11 @@ public class TextAnimatrion : MonoBehaviour
         {
             index++;
             textDisplay.text = "";
+            audio.clip = audioClips[index];
+            if (audio.clip != null)
+            {
+                audio.Play();
+            }
             StartCoroutine(Type());
         }
         else
