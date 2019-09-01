@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TextAnimatrion : MonoBehaviour
 {
@@ -16,17 +17,14 @@ public class TextAnimatrion : MonoBehaviour
     void Start()
     {
         StartCoroutine(Type());
-        continueButton.SetActive(true);
     }
 
     void Update()
     {
-        if (textDisplay.text==sentences[index])
+        if (textDisplay.text == sentences[index])
         {
-            index++;
-            textDisplay.text = "";
-            StartCoroutine(Type());
-        }    
+            continueButton.SetActive(true);
+        }
     }
     IEnumerator Type()
     {
@@ -38,10 +36,20 @@ public class TextAnimatrion : MonoBehaviour
     }
 
     public void NextSentence()
-    {          
+    {
+
+        continueButton.SetActive(false);
+        if (index < sentences.Length - 1)
+        {
             index++;
             textDisplay.text = "";
             StartCoroutine(Type());
+        }
+        else
+        {
+            textDisplay.text = "";
+            continueButton.SetActive(false);
+            SceneManager.LoadScene("Level1"); 
+        }
     }
-    
 }
