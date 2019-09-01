@@ -26,12 +26,9 @@ public class ShowTextScript : MonoBehaviour
                             GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().isCatSave = true;
                             break;
                         case 2:
-                            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().dogAway = true;
-                            break;
-                        case 3:
                             GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().isGrandpaHappy = true;
                             break;
-                        case 4:
+                        case 3:
                             GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().schoolEnd = true;
                             break;
                     }

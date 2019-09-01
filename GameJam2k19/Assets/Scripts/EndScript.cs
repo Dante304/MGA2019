@@ -5,11 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class EndScript : MonoBehaviour
 {
+    public GameController gameController;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && gameController.isCatSave && gameController.isGrandpaHappy && gameController.schoolEnd)
         {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("Outro-Good");
+        }
+        else if (collision.tag == "Player")
+        {
+            SceneManager.LoadScene("Outro-Bad");
         }
     }
 
