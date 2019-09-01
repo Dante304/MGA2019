@@ -13,12 +13,12 @@ public class GravityController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag=="Trigger")
+        if (collision.tag=="Trigger")
         {
-
+            rb2d.gravityScale *= -1;
+            Debug.Log(" gravity: " + rb2d.gravityScale);
         }
-        rb2d.gravityScale *= -1;
-        Debug.Log(" gravity ");
+    
 
 
     }

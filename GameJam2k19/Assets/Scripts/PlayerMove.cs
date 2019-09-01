@@ -30,6 +30,14 @@ public class PlayerMove : MonoBehaviour
         if (!stop)
         {
             moveInput = Input.GetAxisRaw("Horizontal");
+            if (moveInput > 0)
+            {
+                rb2d.GetComponentInChildren<SpriteRenderer>().flipX = false;
+            }
+            else if (moveInput < 0)
+            {
+                rb2d.GetComponentInChildren<SpriteRenderer>().flipX = true;
+            }
             rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y);
         }
     }
