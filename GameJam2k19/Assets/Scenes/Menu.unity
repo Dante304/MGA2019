@@ -772,7 +772,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Wpisa\u0107 tu wszystkich i wszystko\n"
+  m_Text: 'Head Programmer : Kamil Dobrogost
+
+    Programmer : Bartosz Jasak, Dominik Marcinkowski
+
+    Audio & Music : Igor Nowakowski'
 --- !u!222 &766619004
 CanvasRenderer:
   m_ObjectHideFlags: 0
