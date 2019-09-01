@@ -231,6 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 387755690}
   - component: {fileID: 387755689}
+  - component: {fileID: 387755691}
   m_Layer: 0
   m_Name: DialogManager
   m_TagString: Untagged
@@ -253,18 +254,32 @@ MonoBehaviour:
   textDisplay: {fileID: 1668244214}
   sentences:
   - "I\u2019d known that kid, even better than his parents did."
-  - "He\u2019d been all around the place, loyal, I\u2019d never seen him crying."
-  - "He hadn\u2019t got a single problem at school\u2026 Oh, while mentioning it, "
-  - "I\u2019ve recalled how he\u2019d asked me so many questions on his way to school,"
+  - "He\u2019d been all around the place, loyal, I\u2019d never seen him crying. "
+  - "He hadn\u2019t got a single problem at school\u2026 Oh, while mentioning it,"
+  - "I\u2019ve recalled how he\u2019d asked me so many questions on his way to school,
+    like :"
+  - "\u201EWhy the sun shines so bright?\u201D or \u201EWhy there are mosquitoes in
+    the world?\u201D. "
   - "I\u2019d always tried to answer his questions while i had been walking him to
     school."
-  - "He\u2019d once told me he wanted to become a firefighter,"
-  - "save people lives\u2026 and pull down cats from the trees. "
-  - "From school he\u2019d always gone home with his best friend\u2026"
-  - "This time he had to go alone, and then\u2026.."
+  - "He\u2019d once told me he wanted to become a firefighter, save people lives\u2026
+    and pull down cats from the trees. "
+  - "From school he\u2019d always gone home with his best friend\u2026This time he
+    had to go alone, and then\u2026.."
+  - '....'
   typingSpeed: 0.09
-  audioSource: {fileID: 1059858966}
   continueButton: {fileID: 1059858959}
+  audioClips:
+  - {fileID: 8300000, guid: 65ea2510b85b18c4ca9154fbb24f4ccb, type: 3}
+  - {fileID: 8300000, guid: b3d12d2e0a07965458dc3ac544ac0f9a, type: 3}
+  - {fileID: 8300000, guid: 77bbe5b4c326f384b94369f79bb66ae6, type: 3}
+  - {fileID: 8300000, guid: ead2b49f64b1f1242829028e8180fa3c, type: 3}
+  - {fileID: 8300000, guid: ee47e37016f1c694f862b40c66e94976, type: 3}
+  - {fileID: 8300000, guid: 29472ae313d14b449920ef8f8b55a131, type: 3}
+  - {fileID: 8300000, guid: b03a6446684d34b42baf699ec58ff52a, type: 3}
+  - {fileID: 8300000, guid: 6c75e3a2596bb3e488f28f4d4f7fb359, type: 3}
+  - {fileID: 8300000, guid: 6bcc2006c1c864e4bb19895c0f8bab25, type: 3}
+  audio: {fileID: 387755691}
 --- !u!4 &387755690
 Transform:
   m_ObjectHideFlags: 0
@@ -279,6 +294,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &387755691
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387755688}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &891368816
 GameObject:
   m_ObjectHideFlags: 0

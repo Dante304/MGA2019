@@ -10,6 +10,7 @@ public class ShowTextScript : MonoBehaviour
     private bool voicePlay;
     public bool quest;
     public int questNumber;
+    public AudioSource audioSource;
     private void OnTriggerEnter2D(Collider2D collision)
     {
        
@@ -17,7 +18,11 @@ public class ShowTextScript : MonoBehaviour
         {
             if (!voicePlay)
             {
-
+                if (audioSource.clip != null)
+                {
+                    audioSource.Play();
+                }
+                
                 if (quest)
                 {
                     switch (questNumber)
