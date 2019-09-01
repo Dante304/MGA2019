@@ -1,17 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TextAnimatrion : MonoBehaviour
+public class TextAnimationOutroBad : MonoBehaviour
 {
     public TextMeshProUGUI textDisplay;
     public string[] sentences;
     private int index;
     public float typingSpeed;
+
     public GameObject continueButton;
-    
+
 
     void Start()
     {
@@ -48,8 +49,7 @@ public class TextAnimatrion : MonoBehaviour
         {
             textDisplay.text = "";
             continueButton.SetActive(false);
-            SceneManager.LoadScene("Level1");
-            
+            SceneManager.LoadScene("Menu");
         }
     }
 }
