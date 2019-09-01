@@ -12,10 +12,14 @@ public class TextAnimationOutroGood : MonoBehaviour
     public float typingSpeed;
 
     public GameObject continueButton;
-
+    public List<AudioClip> audioClips;
+    public AudioSource audio;
 
     void Start()
     {
+        audio = GetComponent<AudioSource>();
+        audio.clip = audioClips[index];
+        audio.Play();
         StartCoroutine(Type());
     }
 
@@ -37,19 +41,23 @@ public class TextAnimationOutroGood : MonoBehaviour
 
     public void NextSentence()
     {
-
         continueButton.SetActive(false);
         if (index < sentences.Length - 1)
         {
             index++;
             textDisplay.text = "";
+            audio.clip = audioClips[index];
+            if (audio.clip != null)
+            {
+                audio.Play();
+            }
             StartCoroutine(Type());
         }
         else
         {
             textDisplay.text = "";
             continueButton.SetActive(false);
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Menu");
         }
     }
 }

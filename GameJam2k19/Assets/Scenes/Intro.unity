@@ -265,8 +265,8 @@ MonoBehaviour:
   - "He\u2019d once told me he wanted to become a firefighter, save people lives\u2026
     and pull down cats from the trees. "
   - "From school he\u2019d always gone home with his best friend\u2026This time he
-    had to go alone, and then\u2026.."
-  - '....'
+    had to go alone, and then..."
+  - '...'
   typingSpeed: 0.09
   continueButton: {fileID: 1059858959}
   audioClips:
